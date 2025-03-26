@@ -1,0 +1,13 @@
+# Como iniciar o scrapy shell(precisa estar com o ambiente virtual ativado)
+scrapy shell 'https://www.nomedosite.com'
+
+# get() - retorna primeiro item correspondente
+# getall() - retorna todos itens correspondentes
+
+scrapy shell 'https://quotes.toscrape.com/'
+# Como extrair o primeiro resultado apenas
+response.xpath('//span[@class="text"]/text()').get()
+# Como extrair todos resultados correspondentes
+response.xpath('//span[@class="text"]/text()').getall()
+
+//span[@class='text']/text()
