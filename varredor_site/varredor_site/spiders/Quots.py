@@ -17,6 +17,11 @@ class QuotesToScrapeSpider(scrapy.Spider):
 
     #Response
     def parse(self, response):
-        # Aqui é onde você deve processar o que é retornado da response
-        with open('pagina.html', 'wb') as arquivo:
-            arquivo.write(response.body)
+        # aqui é onde você deve processar o que é retornado da response
+        for elemento in response.xpath("//div[@class='quote']"):
+            yield {
+                'frase': elemento.xpath(".//span[@class='text']/text()").get(),
+                'autor': elemento.xpath(".//small[@class='author']/text()").get(),
+                'tags': elemento.xpath(".//a[@class='tag']/text()").getall()
+            }
+            
