@@ -1,8 +1,10 @@
 import scrapy
+
+
 # CanekCase
-class QuotesToScrapeSpider(scrapy.Spider):
-    
-    
+
+
+class GoodReadsSpider(scrapy.Spider):
     #Identidade
     name = 'quotebot'
    
