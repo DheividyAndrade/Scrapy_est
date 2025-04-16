@@ -13,5 +13,7 @@ response.xpath('//span[@class="text"]/text()').getall()
 //span[@class='text']/text()
 
 
-#utilizado para exporta em csv
-scrapy crawl frasebot -o dados.csv
+#utilizado para exporta em csv/xml/json
+scrapy crawl nomebot -O dados.csv
+scrapy crawl nomebot -O dados.xml
+scrapy crawl nomebot -O dados.json
