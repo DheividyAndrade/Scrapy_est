@@ -39,6 +39,9 @@ class GoodReadsSpider(scrapy.Spider):
             print(link_proxima_pagina)
             print('#'*20)
             yield scrapy.Request(url=link_proxima_pagina,callback=self.parse)
-
+        
         # Ver se ainda existe um próxima página
         # Navegar até aquela próxima página ou parar caso não haja mais páginas
+
+
+        
