@@ -1,7 +1,4 @@
 from time import sleep
-import scrapy
-
-# CamelCase
 
 
 class GoodReadsSpider(scrapy.Spider):
